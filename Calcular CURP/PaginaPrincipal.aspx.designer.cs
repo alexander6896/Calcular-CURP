@@ -69,6 +69,33 @@ namespace Calcular_CURP
         protected global::System.Web.UI.WebControls.TextBox txtSegundoApellido;
 
         /// <summary>
+        /// Control ddlMes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlMes;
+
+        /// <summary>
+        /// Control ddlDia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlDia;
+
+        /// <summary>
+        /// Control ddlAño.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlAño;
+
+        /// <summary>
         /// Control btn0a1.
         /// </summary>
         /// <remarks>
@@ -76,42 +103,6 @@ namespace Calcular_CURP
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn0a1;
-
-        /// <summary>
-        /// Control FechaNacimiento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View FechaNacimiento;
-
-        /// <summary>
-        /// Control Calendar1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar Calendar1;
-
-        /// <summary>
-        /// Control btn1a0.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn1a0;
-
-        /// <summary>
-        /// Control btn1a2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn1a2;
 
         /// <summary>
         /// Control LugarNacimiento.
@@ -141,22 +132,22 @@ namespace Calcular_CURP
         protected global::System.Web.UI.WebControls.TextBox txtCiudad;
 
         /// <summary>
-        /// Control btn2a1.
+        /// Control btn1a0.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn2a1;
+        protected global::System.Web.UI.WebControls.Button btn1a0;
 
         /// <summary>
-        /// Control btn2a3.
+        /// Control btn1a2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn2a3;
+        protected global::System.Web.UI.WebControls.Button btn1a2;
 
         /// <summary>
         /// Control CURP.
@@ -177,12 +168,12 @@ namespace Calcular_CURP
         protected global::System.Web.UI.WebControls.Label lblCURP;
 
         /// <summary>
-        /// Control btn3a2.
+        /// Control btn2a1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn3a2;
+        protected global::System.Web.UI.WebControls.Button btn2a1;
     }
 }
