@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Estados.xml" />
     <Content Include="Meses.xml" />
     <Content Include="PaginaPrincipal.aspx" />
     <Content Include="Web.config" />

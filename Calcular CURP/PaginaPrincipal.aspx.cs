@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 //Libreria para usar archivo XML
 using System.Data;
+using System.EnterpriseServices.Internal;
 
 namespace Calcular_CURP
 {
@@ -48,6 +49,14 @@ namespace Calcular_CURP
                     }
                 }
 
+                //Llenar DropDownList de ddlEstados con archivo XML
+                DataSet DS1 = new DataSet();
+                DS1.ReadXml(Server.MapPath("Estados.xml"));
+                ddlEstados.DataSource = DS1;
+                ddlEstados.DataValueField = "EstadoID";
+                ddlEstados.DataTextField = "EstadoNomrbe";
+                ddlEstados.DataBind();
+
                 MultiView1.ActiveViewIndex = 0;
             }
         }
@@ -81,8 +90,21 @@ namespace Calcular_CURP
             string mes = ddlMes.Text;
             string dia = ddlDia.Text;
 
+            //Obtener Sexo
+            string sexo = ddlSexo.SelectedItem.Text;
+            sexo = sexo.Substring(0, 1);
 
-            lblCURP.Text = separarInicialesNombreCompleto(nombre, primerApellido, segundoApellido) + year + mes + dia;
+            //Obtener Estado
+            string estado = ddlEstados.SelectedValue;
+
+            //Imprmiendo CURP en Label
+            lblCURP.Text = separarInicialesNombreCompleto(nombre, primerApellido, segundoApellido)
+                + year + mes + dia
+                + sexo.ToUpper()
+                + estado
+                + separarSApellidoLetra(primerApellido)
+                + separarPApellidoLetra(segundoApellido)
+                + separarNombreEnLetras(nombre);
             //lblCURP.Text = nombreCompleto(nombreAplellidos);
 
             MultiView1.ActiveViewIndex = 2;
@@ -91,6 +113,7 @@ namespace Calcular_CURP
         protected void btn2a1_Click(object sender, EventArgs e)
         {
             //No regresa al View del lugar de Nacimiento
+            //separarInicialesNombreCompleto("", "", "");
             MultiView1.ActiveViewIndex = 1;
         }
 
@@ -106,6 +129,18 @@ namespace Calcular_CURP
             string primerLetraSApellido = sApe.Substring(0, 1);
 
             return primerasLetraPApellido.ToUpper() + primerLetraSApellido.ToUpper() + primerLetraNombre.ToUpper();
+        }
+        public string separarNombreEnLetras(string nombre)
+        {
+            return "";
+        }
+        public string separarPApellidoLetra(string pApellido)
+        {
+            return "";
+        }
+        public string separarSApellidoLetra(string sApellido)
+        {
+            return "";
         }
     }
 }
