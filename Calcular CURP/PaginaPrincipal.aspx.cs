@@ -102,8 +102,8 @@ namespace Calcular_CURP
                 + year + mes + dia
                 + sexo.ToUpper()
                 + estado
-                + separarSApellidoLetra(primerApellido)
-                + separarPApellidoLetra(segundoApellido)
+                + separarPApellidoLetra(primerApellido)
+                + separarSApellidoLetra(segundoApellido)
                 + separarNombreEnLetras(nombre);
             //lblCURP.Text = nombreCompleto(nombreAplellidos);
 
@@ -130,17 +130,67 @@ namespace Calcular_CURP
 
             return primerasLetraPApellido.ToUpper() + primerLetraSApellido.ToUpper() + primerLetraNombre.ToUpper();
         }
-        public string separarNombreEnLetras(string nombre)
+        public char separarNombreEnLetras(string nombre)
         {
-            return "";
+            //Pasamos el Nombre a Mayusculas
+            nombre = nombre.ToUpper();
+            //Creamos la variable de tipo Char para poder seleccionar solo la consonante
+            char[] arrNombre;
+            //Pasamos el string a un arreglo de char
+            arrNombre = nombre.ToCharArray();
+            //Ciclo For para poder seleccionar la letra diferente de las vocales
+            for (int i = 1; i < arrNombre.Length; i++)
+            {
+                if (arrNombre[i].ToString() != "A"
+                    && arrNombre[i].ToString() != "E"
+                    && arrNombre[i].ToString() != "I"
+                    && arrNombre[i].ToString() != "O"
+                    && arrNombre[i].ToString() != "U")
+                {
+                    //Retornamos la primer consonante encontrada
+                    return arrNombre[i];
+                }
+            }
+            return arrNombre[0];
         }
-        public string separarPApellidoLetra(string pApellido)
+        public char separarPApellidoLetra(string pApellido)
         {
-            return "";
+            pApellido = pApellido.ToUpper();
+            char[] arrPApellido;
+            arrPApellido = pApellido.ToCharArray();
+
+            for (int i = 2; i < arrPApellido.Length; i++)
+            {
+                if (arrPApellido[i].ToString() != "A"
+                    && arrPApellido[i].ToString() != "E"
+                    && arrPApellido[i].ToString() != "I"
+                    && arrPApellido[i].ToString() != "O"
+                    && arrPApellido[i].ToString() != "U")
+                {
+                    //Retornamos la primer consonante encontrada
+                    return arrPApellido[i];
+                }
+            }
+            return arrPApellido[0];
         }
-        public string separarSApellidoLetra(string sApellido)
+        public char separarSApellidoLetra(string sApellido)
         {
-            return "";
+            sApellido = sApellido.ToUpper();
+            char[] arrSApellido;
+            arrSApellido = sApellido.ToCharArray();
+            for (int i = 1; i < arrSApellido.Length; i++)
+            {
+                if (arrSApellido[i].ToString() != "A"
+                    && arrSApellido[i].ToString() != "E"
+                    && arrSApellido[i].ToString() != "I"
+                    && arrSApellido[i].ToString() != "O"
+                    && arrSApellido[i].ToString() != "U")
+                {
+                    //Retornamos la primer consonante encontrada
+                    return arrSApellido[i];
+                }
+            }
+            return arrSApellido[0];
         }
     }
 }
